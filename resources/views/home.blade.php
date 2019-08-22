@@ -38,10 +38,11 @@
     </div>
 
     <!--Main-->
+    @unless(!$ongoingEvent)
+
     <div class="container pt-24 md:pt-48 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         
         <!--Left Col-->
-        @unless(!$ongoingEvent)
         <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
             <h1 class="my-4 text-3xl md:text-5xl text-gray-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">{{$ongoingEvent->title}}</h1>
             <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">{{$ongoingEvent->description}}</p>
@@ -66,7 +67,6 @@
 
 
         </div>
-        @endunless
         
         <!--Right Col-->
         <div class="w-full xl:w-3/5 py-6 overflow-y-hidden">
@@ -79,6 +79,7 @@
         </div>
         
     </div>
+    @endunless
 
     <div class="container mx-auto mb-20 px-20">
         <div class="p-4">

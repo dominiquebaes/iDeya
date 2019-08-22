@@ -1,7 +1,8 @@
 <?php
-
-Route::view('login', "office::login")->name('office.login');
-Route::post('login', "LoginController")->name('office.login.submit');
+Route::group(['middleware'=> 'guest'], function(){
+    Route::view('login', "office::login")->name('office.login');
+    Route::post('login', "LoginController")->name('office.login.submit');
+});
 
 Route::group(['middleware'=> 'auth'], function(){
     Route::post('logout','\App\Http\Controllers\Auth\LoginController@logout')->name('office.logout');
