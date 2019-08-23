@@ -14,9 +14,6 @@
 						<span class="text-right text-sm rounded-full bg-blue-500 px-4 text-white hover:bg-blue-600">
 							<a href="{{route('adminevent.edit', compact('event'))}}">Update</a>
 						</span>
-						<span class="text-right text-sm rounded-full bg-red-500 px-4 text-white hover:bg-red-600">
-							<a href="#">Delete</a>
-						</span>
 					</div>
 					<div class="mb-2 flex justify-between">
 						<span class="text-sm font-semibold">Type:</span>
