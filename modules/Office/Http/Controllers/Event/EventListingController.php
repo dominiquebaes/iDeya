@@ -45,7 +45,6 @@ class EventListingController extends Controller
         $data['slug'] = Str::slug($data['title']);
 
         Event::create($data);
-
         return redirect()->route('adminevent.index');
     }
 
