@@ -24,7 +24,7 @@ class CreateEventsTable extends Migration
             $table->integer('type_id');
             $table->integer('expected_no');
             $table->integer('actual_no')->nullable();
-            $table->string('guestspeaker')->nullable();
+            $table->integer('speaker_id')->nullable();
             $table->float('eventbudget')->nullable();
             $table->enum('status',['upcoming','on-going','done','cancelled','pending','approved'])->default('pending');
             $table->float('reg_fee')->nullable();

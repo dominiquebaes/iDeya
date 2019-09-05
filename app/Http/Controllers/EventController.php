@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Event;
+use App\Speaker;
 use App\EventType;
 use App\Http\Requests\Events\CreateEventRequest;
 use Illuminate\Http\Request;
@@ -18,7 +19,6 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::all();
-
         return view('event.index', compact('events'));
     }
 
@@ -30,7 +30,8 @@ class EventController extends Controller
     public function create()
     {
         $eventTypes = EventType::all();
-        return view('event.create', compact('eventTypes'));
+        $eventSpeakers = Speaker::all();
+        return view('event.create', compact('eventTypes', 'eventSpeakers'));
     }
 
     /**
@@ -91,6 +92,8 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = $request->except('_token');
+        $event->delete();
+        return redirect()->route('adminevent.index');
     }
 }
