@@ -7,7 +7,12 @@
             <div class="col-md-10">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Speaker Listings</h4>
+                        <h1 class="text-3xl">
+                            Speaker Listings
+                        </h1>
+                        <a href="{{route('adminevent.speaker.add')}}" role="button" class="bg-red-600 hover:bg-red-700 text-white text-sm px-4 py-2  border rounded-full ml-2" id="create-event">
+                            Add Speaker
+                        </a>
                     </div>
                     <div class="card-body">
                         <table class="table table table-bordered table-striped .table-responsive">
@@ -18,7 +23,6 @@
                                 <th>Email</th>
                                 <th>Profession</th>
                                 <th>Organization</th>
-                                <th>Description</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -29,7 +33,6 @@
                                     <td> {{$speaker->email}} </td>
                                     <td> {{$speaker->profession }} </td>
                                     <td> {{$speaker->organization}} </td>
-                                    <td> {{$speaker->description}} </td>
                                 </tr>
                             @endforeach
                             </tbody>

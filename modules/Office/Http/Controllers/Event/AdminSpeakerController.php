@@ -7,6 +7,7 @@ use App\Speaker;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
+use App\Http\Requests\Events\AddSpeakerRequest;
 
 class AdminSpeakerController extends Controller
 {
@@ -17,7 +18,7 @@ class AdminSpeakerController extends Controller
     public function index()
     {
         $speaker = Speaker::all();
-        return view('office::adminevent.speaker.index', compact('speaker'));
+        return view('office::adminevent.speaker.index', compact('event'));
     }
 
     /**
@@ -34,7 +35,7 @@ class AdminSpeakerController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(AddSpeakerRequest $request)
     {
         $data = $request->except('_token');
 

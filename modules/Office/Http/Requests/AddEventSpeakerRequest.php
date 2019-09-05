@@ -17,8 +17,6 @@ class AddEventSpeakerRequest extends FormRequest
             'first_name' => 'required|string',
             'last_name' => 'required|string',
             'email' => 'required|string',
-            'organization' => 'string',
-            'profession' => 'string',
             'contact' => 'required|string',         ];
     }
 
