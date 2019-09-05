@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Hash;
 use Modules\Office\Entities\CoWorking;
 use Modules\Office\Http\Requests\AddCoWorkingRequest;
 
-
 class CreateCoWorkingController extends Controller
 {
     public function __invoke(AddCoWorkingRequest $request)

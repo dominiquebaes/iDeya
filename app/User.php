@@ -50,7 +50,6 @@ class User extends Authenticatable
                 return Intern::whereEmail($this->email)->first()->fullName();
             case "co-worker":
                 return CoWorking::whereEmail($this->email)->first()->fullName();
-
         }
     }
 

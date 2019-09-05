@@ -10,8 +10,7 @@ use App\Http\Controllers\Controller;
 class SpeakerDetailController extends Controller
 {
     public function __invoke(Event $event, Speaker $speaker)
-
     {
-    	return view('event.speakerdetail', compact('event', 'speaker'));
+        return view('event.speakerdetail', compact('event', 'speaker'));
     }
 }

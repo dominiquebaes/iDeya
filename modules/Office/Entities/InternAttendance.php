@@ -8,7 +8,7 @@ class InternAttendance extends Model
 {
     protected $guarded = [];
 
-     public function fullName()
+    public function fullName()
     {
         return $this->first_name . ' ' . $this->last_name;
     }

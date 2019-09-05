@@ -12,17 +12,17 @@ use Illuminate\Routing\Controller;
 
 class AttendanceListingController extends Controller
 {
-    
+
     public function __invoke(Request $request)
     {
-       
+
         $guestAttendance = GuestAttendance::all();
         $employeeAttendance = EmployeeAttendance::all();
         $internAttendance = InternAttendance::all();
         $coworkingAttendance = CoworkingAttendance::all();
         $participantAttendance = ParticipantAttendance::all();
-     
 
-        return view('office::attendance.listing', compact('guestAttendance','employeeAttendance','internAttendance','coworkingAttendance', 'participantAttendance'));
+
+        return view('office::attendance.listing', compact('guestAttendance', 'employeeAttendance', 'internAttendance', 'coworkingAttendance', 'participantAttendance'));
     }
 }
